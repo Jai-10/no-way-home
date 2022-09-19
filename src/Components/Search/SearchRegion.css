@@ -1,0 +1,23 @@
+.SearchRegionS{
+    width: 35%;
+    border-radius: 15%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-left: 13%;
+    text-align: center;
+    margin-top: 1.5%;
+    padding: 2%;
+}
+
+.regionEle{
+    width: 33%;
+    padding: 1%;
+}
+
+.regionEle img:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.regionEle img{
+    width: 100%;
+    border-radius: 15px;
+}

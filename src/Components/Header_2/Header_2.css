@@ -1,0 +1,114 @@
+.header-two-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.header-two {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 76vw;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all ease-in-out .1s;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.header-item {
+    display: inline;
+    margin: 7px 15px;
+    color: rgb(103, 103, 103);
+    transition: all ease-in-out .1s;
+    cursor: pointer;
+}
+.header-item i {
+    font-size: 22px;
+    transition: all ease-in-out .1s;
+}
+.header-item p {
+    margin-top: 3px;
+    font-size: 13px;
+    transition: all ease-in-out .1s;
+}
+.header-item:hover {
+    color: #000;
+    border-radius: 3px;
+    border-bottom: 3px solid rgb(95, 95, 95);
+}
+
+.header-two::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.left, .right {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid rgb(137, 137, 137);
+    color: black;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all ease-in-out .1s;
+}
+.left:hover, .right:hover {
+    transform: translateY(-1px);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.left i, .right i {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: all ease-in-out .1s;
+}
+
+
+.left {
+    top: 200px;
+    left: 70px;
+}
+.right {
+    top: 200px;
+    right: 230px;
+}
+/* .left-blur {
+    position: absolute;
+    height: 100px;
+    width: 40px;
+    z-index: 10;
+    top: -30px;
+    left: 10px;
+    background-color: linear-gradient(to right, rgb(0, 0, 0), transparent);
+} */
+
+
+
+.sort-filter {
+    display: flex;
+    padding: 2px;
+    transition: all ease-in-out .1s;
+}
+.sort, .filter {
+    display: flex;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all ease-in-out .1s;
+}
+.sort i, .filter i {
+    margin: 6px;
+    margin-top: 3px;
+}
+.sort p, .filter p {
+    font-size: 16px;
+    font-weight: bold;
+}
