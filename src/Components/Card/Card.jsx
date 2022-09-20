@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import './Card.css'
-import pic from "./images/hotel-agencies.jpg";
-import './rating/rating'
 
 class Card extends Component {
+
   render() {
+
+    let icons = ''
+    for (let i=0; i<this.props.rating; i++) {
+      icons += (`<i className="fa-solid fa-star"></i>`)
+    }
+
+
     return(
       <div className="card cards"
         style={{
@@ -13,23 +19,15 @@ class Card extends Component {
           backgroundColor: `${ this.props.theme==='light' ? "#fff" : "#000"}`
         }}
       >
-        <img className="card-img-top" src={pic} alt="Card-img" />
+        <img className="card-img-top" src={this.props.imageURL} alt="hotel-img" />
         <div className="card-body">
-              <h5 className="card-title">Hotel-Name</h5>
+              <h5 className="card-title"> {this.props.name} </h5>
                 <div style={{marginBottom:"2px"}}>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
-                      <i className="fa-solid fa-star"></i>
+                  {icons}
                 </div>
-              <p className="card-text">5,565 kilometers </p>
-              
-              
+              <p className="card-text"> {this.props.distance} kilometers </p>
         </div>
-        
       </div>
- 
     )
   }
 }

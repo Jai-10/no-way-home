@@ -13,15 +13,13 @@ class Navbar extends Component {
       this.setState({ navOpen: true })
       document.querySelector(".menu-bar-1").style.transform = "rotate(-30deg)"
       document.querySelector(".menu-bar-2").style.transform = "rotate(30deg)"
-      document.querySelector(".my-navbar").style.left = "0px"
-      document.querySelector(".menu").style.left = "0px"
+      document.querySelector(".my-navbar").style.left = "50px"
     }
     else if (this.state.navOpen === true) {
       this.setState({ navOpen: false })
       document.querySelector(".menu-bar-1").style.transform = "rotate(30deg)"
       document.querySelector(".menu-bar-2").style.transform = "rotate(-30deg)"
       document.querySelector(".my-navbar").style.left = "-200px"
-      document.querySelector(".menu").style.left = "-190px"
     }
   }
 

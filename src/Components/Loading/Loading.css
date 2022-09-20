@@ -91,6 +91,7 @@
     color: rgb(106, 106, 106);
     opacity: 1;
     transition: all ease-in-out .5s;
+    text-align: center;
 }
 .loading-quotes-container p:nth-child(1) { top: 13%; left: 70%; }
 .loading-quotes-container p:nth-child(2) { top: 50%; left: 8%; }

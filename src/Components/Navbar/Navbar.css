@@ -1,5 +1,5 @@
 .parent {
-    z-index: 100;
+    z-index: 99;
     position: absolute;
     margin-top: 130px;
 }
@@ -64,7 +64,6 @@
     height: 3px;
     width: 30px;
     border-radius: 10px;
-    /* background-color: #fff; */
     background-color: #000;
     transition: all ease-in-out .3s;
 }
