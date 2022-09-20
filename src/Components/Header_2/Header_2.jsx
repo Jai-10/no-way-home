@@ -14,13 +14,6 @@ const Header_2 = (props) => {
 
   return (
       <>
-        {/* <div className="left"
-          // onClick={() => slide(-50)}
-        >
-          <i className="fa-solid fa-chevron-left"></i>
-          <div className="left-blur"></div>
-        </div> */}
-
       <div className='header-two-container'
         style={ props.theme==='light' ? lightTheme : darkTheme }
       >
@@ -122,12 +115,6 @@ const Header_2 = (props) => {
           </div>
         </div>
       </div>
-
-        {/* <div className="right"
-          // onClick={() => slide(50)}
-          >
-          <i className="fa-solid fa-chevron-right"></i>
-        </div> */}
       </>
     )
   // }

@@ -6,7 +6,8 @@
 }
 
 .header-two {
-    /* border: 1px solid black; */
+    border-left: 3px solid rgb(79, 79, 79);
+    border-right: 3px solid rgb(79, 79, 79);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,48 +49,6 @@
     display: none;
 }
 
-
-
-.left, .right {
-    position: absolute;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    border: 1px solid rgb(137, 137, 137);
-    color: black;
-    background-color: #fff;
-    cursor: pointer;
-    transition: all ease-in-out .1s;
-}
-.left:hover, .right:hover {
-    transform: translateY(-1px);
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
-.left i, .right i {
-    font-size: 16px;
-    margin-top: 10px;
-    margin-left: 10px;
-    transition: all ease-in-out .1s;
-}
-
-
-.left {
-    top: 200px;
-    left: 70px;
-}
-.right {
-    top: 200px;
-    right: 230px;
-}
-/* .left-blur {
-    position: absolute;
-    height: 100px;
-    width: 40px;
-    z-index: 10;
-    top: -30px;
-    left: 10px;
-    background-color: linear-gradient(to right, rgb(0, 0, 0), transparent);
-} */
 
 
 

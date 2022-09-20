@@ -68,14 +68,14 @@ class Search extends Component {
     }
     
     return (
-     <div className='searchSection'>
+     <div className='searchSection mt-0'>
          <div className="logo">
            <img src={require("../../assets/logo.png")} alt='logoimage'
             style={{
-              width:'150px',
+              width: '80px',
               position: "absolute",
-              top: "-20px",
-              left: "0"
+              marginTop: "1.5%",
+              marginLeft: "4%"
             }}
           />
          </div>

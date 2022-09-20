@@ -4,14 +4,13 @@ import './Header_1.css'
 class Header_1 extends Component {
   render() {
     return (
-      <div className='header1 d-flex justify-content-around mt-4'>
+      <div className='header1 d-flex justify-content-around'>
          <div className="logo">
            <img src={require("../../assets/logo.png")} alt='logoimage'
             style={{
-              width:'150px',
+              width: '80px',
               position: "absolute",
-              top: "-20px",
-              left: "0"
+              marginTop: "-1.4%"
             }}
           />
          </div>
