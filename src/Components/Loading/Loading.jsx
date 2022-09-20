@@ -20,6 +20,43 @@ class Loading extends Component {
 
 
     render() {
+
+        // loading quotes animation
+        setTimeout(() => {
+            const items = document.querySelectorAll(".loading-quotes");
+            for (let i=0; i<items.length; i++) {
+                items[i].style.transform = "translateY(-3px)"
+                items[i].style.opacity = "0"
+            }
+        }, 2500);
+        
+        // loading dots animation
+        setTimeout(() => {
+            document.querySelector(".loading-dots").style.opacity = "0"
+        }, 3000);
+        setTimeout(() => {
+            document.querySelector(".dot1").style.transform = "translateY(-3px)"
+            document.querySelector(".dot1").style.opacity = "0"
+        }, 3300);
+        setTimeout(() => {
+            document.querySelector(".dot1").style.transform = "translateY(-3px)"
+            document.querySelector(".dot1").style.opacity = "0"
+        }, 3600);
+        setTimeout(() => {
+            document.querySelector(".dot1").style.transform = "translateY(-3px)"
+            document.querySelector(".dot1").style.opacity = "0"
+        }, 3900);
+        // "loading" text animation
+        setTimeout(() => {
+            document.querySelector(".loading-h1 h1").textContent = "Ready!"
+            document.querySelector(".loading-h1 h1").style.color = "white"
+            document.querySelector(".loading-h1 h1").style.textShadow = "0 0 5px #fff"
+            document.querySelector(".loading-h1 h1").style.animation = "none"
+            document.querySelector(".loading").style.backgroundColor = "black"
+        }, 4000);
+        
+
+
     return (
         <div className='loading'
             onClick={this.changeLoadingState}
@@ -41,6 +78,7 @@ class Loading extends Component {
             </div>
 
 
+
             <div className="loading-quotes-container">
                 <p className='loading-quotes'>Travelling is a therapy</p>
                 <p className='loading-quotes'>Work. Travel. Save. Repeat</p>
@@ -53,9 +91,9 @@ class Loading extends Component {
             </div>
 
 
-            <div className="continue">
+            {/* <div className="continue">
                 <p>(Click anywhere to continue)</p>
-            </div>
+            </div> */}
         </div>
     )
   }
