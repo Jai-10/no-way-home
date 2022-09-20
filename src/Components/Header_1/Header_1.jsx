@@ -16,7 +16,7 @@ class Header_1 extends Component {
           />
          </div>
          <div className="search">
-            <div className='d-flex flex-row justify-content-around'>
+            <div className='d-flex flex-row justify-content-around searchDisplay'>
               <div className="anywhere p-2">Anywhere</div>
               <div className="vr"></div>
               <div className="anyweek p-2">Any week</div>

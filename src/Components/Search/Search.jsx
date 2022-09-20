@@ -39,10 +39,10 @@ class Search extends Component {
   render(){
 
     const bottomBorder = {borderBottom:'2px solid black', paddingBottom:'1%'}
-    const checkBg = { backgroundColor: 'white',borderRadius: '45px',width: '64%',height: '5.25em',margin: '-15px', marginLeft: '-62px',  textAlign: 'center',paddingTop: '4.5%',cursor:'pointer'}
-    const whoBg = {backgroundColor: 'white',borderRadius: '45px',height: '5.4em',width: '63%',margin: '-16px',marginRight: '-72px',
-    textAlign: 'center',paddingTop: '1.5%',paddingLeft: '1.5%'}
-    const whereBg = {backgroundColor: 'white',borderRadius: '45px',width: '26%',height: '5.3em',margin: '-16px',marginLeft: '-56px',textAlign: 'center',paddingTop: '1.5%'}
+    // const checkBg = { backgroundColor: 'white',borderRadius: '45px',width: '64%',height: '5.25em',margin: '-15px', marginLeft: '-62px',  textAlign: 'center',paddingTop: '4.5%',cursor:'pointer'}
+    // const whoBg = {backgroundColor: 'white',borderRadius: '45px',height: '5.4em',width: '63%',margin: '-16px',marginRight: '-72px',
+    // textAlign: 'center',paddingTop: '1.5%',paddingLeft: '1.5%'}
+    // const whereBg = {backgroundColor: 'white',borderRadius: '45px',width: '26%',height: '5.3em',margin: '-16px',marginLeft: '-56px',textAlign: 'center',paddingTop: '1.5%'}
 
     const isWhere = this.state.showWhere;
     const isChecked = this.state.showCalender;
@@ -52,34 +52,21 @@ class Search extends Component {
     let data = <SearchRegion/>;
     if(!isChecked && !isGuest && isWhere){
       data = <SearchRegion/>;
-    }else if(isGuest && !isChecked || isGuest && !isWhere){
+    }else if((isGuest && !isChecked) || (isGuest && !isWhere)){
       data = <Who/>;
-      document.querySelector('.checkIn').style = 'background:transparent, cursor:pointer';
-      document.querySelector('.checkOut').style = 'background:transparent';
       document.querySelector('.bgWhite').style = 'background:transparent';
-      Object.assign(document.querySelector('.right').style,whoBg);
+      document.querySelector('.right').style='border-bottom:2px solid black';
+      document.querySelector('.checkIn').style='border:none';
+      document.querySelector('.checkOut').style='border:none';
 
     }else{
       data = <CalendarSearch/>;
-      Object.assign(document.querySelector('.checkIn').style,checkBg);
-      Object.assign(document.querySelector('.checkOut').style,checkBg);
+      document.querySelector('.checkIn').style='border-bottom:2px solid black';
+      document.querySelector('.checkOut').style='border-bottom:2px solid black';
       document.querySelector('.bgWhite').style = 'background:transparent';
-      document.querySelector('.right').style = 'background:transparent';
+      document.querySelector('.right').style='border:none';
     }
     
-    // const checkInClicked = () => {
-    //   // document.querySelector('.checkIn').style.cssText = checkBg;
-    //   Object.assign(document.querySelector('.checkIn').style,checkBg)
-    // }
-
-    // const checkOutClicked = () => {
-    //   Object.assign(document.querySelector('.checkOut').style,checkBg)
-    // }
-
-    // const whoClicked = () => {
-    //   Object.assign(document.querySelector('.right').style,whoBg)
-    // }
-
     return (
      <div className='searchSection'>
          <div className="logo">
@@ -93,7 +80,7 @@ class Search extends Component {
           />
          </div>
 
-        <div className="searchSectonHead d-flex justify-content-around w-75 mx-auto mt-4">
+        <div className="searchSectionHead d-flex justify-content-around w-75 mx-auto mt-4">
            <p className='font' style={bottomBorder}>Stays</p>
            <p className='font'>Experiences</p>
            <p className='font'>Online Experiences</p>
@@ -106,11 +93,11 @@ class Search extends Component {
           </div>
 
           <div className="center d-flex justify-content-between pl-4 w-25">
-            <div className='checkIn' onClick={this.handleCheckClick} style={{cursor:'pointer'}}>
+            <div className='checkIn check' onClick={this.handleCheckClick} style={{cursor:'pointer'}}>
                 <p>Check in</p>
                 <p className='fontLight'>Add dates</p>
             </div>
-            <div className='checkOut' style={{cursor:'pointer'}} onClick={this.handleCheckClick}>
+            <div className='checkOut check' style={{cursor:'pointer'}} onClick={this.handleCheckClick}>
                 <p>Check out</p>
                 <p  className='fontLight'>Add dates</p>
             </div>

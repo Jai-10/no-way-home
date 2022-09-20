@@ -54,6 +54,14 @@ class Loading extends Component {
             document.querySelector(".loading-h1 h1").style.animation = "none"
             document.querySelector(".loading").style.backgroundColor = "black"
         }, 4000);
+        // show continue popup
+        setTimeout(() => {
+            document.querySelector('.continue').style.opacity = "1"
+        }, 4300);
+        // hide continue popup
+        setTimeout(() => {
+            document.querySelector('.continue').style.opacity = "0"
+        }, 7000);
         
 
 
@@ -91,9 +99,9 @@ class Loading extends Component {
             </div>
 
 
-            {/* <div className="continue">
+            <div className="continue">
                 <p>(Click anywhere to continue)</p>
-            </div> */}
+            </div>
         </div>
     )
   }

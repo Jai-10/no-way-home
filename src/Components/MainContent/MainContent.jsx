@@ -25,7 +25,7 @@ class MainContent extends Component {
         <Card theme={this.props.theme} />
         <Card theme={this.props.theme} />
         <Card theme={this.props.theme} />
-        <Card theme={this.props.themed} />
+        <Card theme={this.props.theme} />
       </div>
     )
   }
