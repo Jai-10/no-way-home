@@ -1,49 +1,13 @@
 .footer-one {
-  position: fixed;
   width: 100%;
-  bottom: 0;
-  background-color: rgb(207, 207, 207);
+  font-size: 16px;
 }
 
-
-li{
-  display: inline-block;
-}
-
-#language{
-  padding: 60px;
-}
-
-.line {
-  display: inline-block;
-  position: relative;
-  color: black;
-}
-
-.line:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color:black;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.line:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-#angle-icon{
+#angle-icon {
+  display: inline;
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 20px;
   cursor: pointer;
-}
-
-.map{
-  border-radius: 10px;
-  display: inline-flex;
-  align-self: center;
+  transition: all ease-in-out .1s;
 }

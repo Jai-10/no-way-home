@@ -4,8 +4,12 @@ import './Footer_2.css';
 class Footer_2 extends Component {
   render() {
     return (
-    <footer className="footer">
-		<div className="container">
+    <footer className="footer" id='footer-two'
+		style={{
+			bottom: `${ this.props.isFooterOpen ? "8.6%" : "-200%"}`
+		}}
+	>
+		<div className="footer-container">
 			<div className="row">
 				<div className="footer-col">
 					<h4>Support</h4>

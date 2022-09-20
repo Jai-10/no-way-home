@@ -1,7 +1,16 @@
-/* theme btn */
-.theme {
+.main-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* go to top btn */
+.go-to-top {
     position: fixed;
-    bottom: 30px;
+    bottom: 90px;
     right: 11px;
     height: 45px;
     width: 45px;
@@ -12,12 +21,13 @@
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-.theme i {
-    margin-top: 8px;
+
+.go-to-top i {
+    margin-top: 7px;
     margin-left: 11px;
     font-size: 28px;
 }
-.theme:hover {
+.go-to-top:hover {
     transform: translateY(-2px);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }

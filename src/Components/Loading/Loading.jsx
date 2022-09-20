@@ -56,11 +56,12 @@ class Loading extends Component {
         }, 4000);
         // show continue popup
         setTimeout(() => {
-            document.querySelector('.continue').style.opacity = "1"
+            document.querySelector('#continue').style.opacity = "1"
         }, 4300);
         // hide continue popup
         setTimeout(() => {
-            document.querySelector('.continue').style.opacity = "0"
+            document.querySelector('#continue').style.opacity = "0"
+            document.querySelector('#continue').style.visibility = "hidden"
         }, 7000);
         
 
@@ -99,7 +100,7 @@ class Loading extends Component {
             </div>
 
 
-            <div className="continue">
+            <div id="continue">
                 <p>(Click anywhere to continue)</p>
             </div>
         </div>

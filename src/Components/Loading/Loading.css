@@ -103,7 +103,7 @@
 .loading-quotes-container p:nth-child(8) { top: 76%; left: 5%; }
 
 
-.continue {
+#continue {
     opacity: 0;
     position: fixed;
     left: 50%;

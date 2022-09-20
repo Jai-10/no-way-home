@@ -3,36 +3,47 @@
 body {
 	line-height: 1.5;
 	font-family: 'Poppins', sans-serif;
+	transition: all ease-in-out .4s;
 }
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	transition: all ease-in-out .4s;	
 }
 
-.container {
+#footer-two {
+	width: 100%;
+	position: fixed;
+}
+
+.footer-container {
 	max-width: 1170px;
 	margin: auto;
+	transition: all ease-in-out .4s;	
 }
 
 .row {
 	display: flex;
 	flex-wrap: wrap;
+	transition: all ease-in-out .4s;	
 }
 
 ul {
 	list-style: none;
+	transition: all ease-in-out .4s;	
 }
 
 .footer {
 	background-color: #24262b;
 	padding: 70px 0;
+	transition: all ease-in-out .4s;	
 }
 
 .footer-col {
 	width: 25%;
 	padding: 0 15px;
+	transition: all ease-in-out .4s;	
 }
 
 .footer-col h4 {
@@ -42,6 +53,7 @@ ul {
 	margin-bottom: 35px;
 	font-weight: 500;
 	position: relative;
+	transition: all ease-in-out .4s;	
 }
 
 .footer-col h4::before {
@@ -63,7 +75,7 @@ ul {
 	font-weight: 300;
 	color: #bbbbbb;
 	display: block;
-	transition: all 0.3s ease;
+	transition: all ease-in-out .4s;
 }
 
 .footer-col ul li a:hover {

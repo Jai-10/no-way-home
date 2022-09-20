@@ -1,22 +1,30 @@
 import React, { Component } from 'react'
+import Footer_2 from '../Footer_2/Footer_2'
 import './Footer_1.css'
 
 class Footer_1 extends Component {
 
-  state = {
-    isFooterOpen: false,
-    footerIcon: "angle-up"
+  constructor(props) {
+    super(props)
+    this.state = {
+      isFooterOpen: false,
+      footerIcon: "angle-up"
+    }
   }
 
-  openDiv = () => {
-    // let icon = document.querySelector("#angle-icon")
+
+  openFooter = () => {
     if (this.state.isFooterOpen === false) {
-      this.setState({ isFooterOpen: true, footerIcon: "xmark" })
-      console.log('footer opened');
+      this.setState({
+        isFooterOpen: true,
+        footerIcon: "xmark"
+      })
     }
-    else if (this.state.isFooterOpen === true) {
-      this.setState({ isFooterOpen: false, footerIcon: "angle-up" })
-      console.log('footer closed');
+    else {
+      this.setState({
+        isFooterOpen: false,
+        footerIcon: "angle-up"
+      })
     }
   }
  
@@ -26,21 +34,26 @@ class Footer_1 extends Component {
   render() {
     return (
 
-      <div className='footer-one'>
-        
-        <ul>
-          <li><i className="fa-solid fa-copyright"></i> 2022 Airbnb, Inc.</li>
-          <li>&nbsp;Privacy . Terms . Sitemap . Company details . Destinations </li>
-          <li id="language"><i className="fa-sharp fa-solid fa-globe"> </i> English(IN)</li>
-          <li><i className="fa-solid fa-indian-rupee-sign"></i> INR</li>
-          &nbsp; &nbsp;<li className="line"> Support and Resources</li>
-          &nbsp;<li onClick={this.openDiv} ><i id="angle-icon"className={`fa-solid fa-${this.state.footerIcon}`}></i></li>
-         
-          
-        </ul>
-      
+      <>
+      <Footer_2
+        isFooterOpen={this.state.isFooterOpen}
+        theme={this.props.theme}
+      />
+
+      <div className="footer-one">
+        <footer className="text-center text-white" style={{backgroundColor: "#f1f1f1"}}>
+          <div className="text-center text-dark p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
+              <span>
+                © 2022 No Way Home, Inc
+              </span>
+              <div id="angle-icon" onClick={this.openFooter}>
+                <i className={`fa-solid fa-${this.state.footerIcon}`}></i>
+              </div>
+          </div>
+        </footer>
       </div>
-      
+      </>
+
     )
   }
 }

@@ -15,8 +15,10 @@ class MainContent extends Component {
               key = {card.id}
               imageURL = {card.image}
               name = {card.name}
+              location = {card.location}
               rating = {card.rating}
               distance = {card.distance}
+              price = {card.price}
               theme = {this.props.theme}
             />
           })
