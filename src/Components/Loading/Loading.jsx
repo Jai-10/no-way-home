@@ -16,15 +16,30 @@ class Loading extends Component {
         }
     }
 
-    loadingBar = () => {
-        // document.querySelector('.loader').style
-    }
 
 
 
     render() {
 
         // loading quotes animation
+        setTimeout(() => {
+            let i = 0;
+            if (i == 0) {
+                i = 1;
+                let elem = document.querySelector(".loader");
+                let width = 1;
+                let id = setInterval(frame, 16);
+                function frame() {
+                    if (width >= 100) {
+                        clearInterval(id);
+                        i = 0;
+                    } else {
+                        width++;
+                        elem.style.width = width + "%";
+                    }
+                }
+            }
+        }, 2000)
         setTimeout(() => {
             const items = document.querySelectorAll(".loading-quotes");
             for (let i=0; i<items.length; i++) {
@@ -61,12 +76,15 @@ class Loading extends Component {
         setTimeout(() => {
             document.querySelector('#continue').style.opacity = "1"
         }, 4300);
+        setTimeout(() => {
+            document.querySelector('.loader-container').style.display = "none";
+        }, 5000);
         // hide continue popup
         setTimeout(() => {
             document.querySelector('#continue').style.opacity = "0"
             document.querySelector('#continue').style.visibility = "hidden"
-        }, 7000);
-    
+        }, 8000);
+        
 
 
 
@@ -110,9 +128,9 @@ class Loading extends Component {
             </div>
 
 
-            <div className="loader"
-                onClick={this.loadingBar}
-            ></div>
+            <div className="loader-container">
+                <div className="loader"></div>
+            </div>
         </div>
     )
   }

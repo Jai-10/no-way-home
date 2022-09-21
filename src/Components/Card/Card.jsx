@@ -57,7 +57,7 @@ class Card extends Component {
               <div className="like" onClick={this.likeHotel}>
                 <i className='fa-solid fa-heart'
                   style={{
-                    color: `${ this.state.like ? "rgb(220, 11, 11)" : "rgba(18, 18, 18, 0.715)" }`
+                    color: `${ this.state.like ? "rgb(230, 11, 11)" : "rgba(18, 18, 18, 0.715)" }`
                   }}
                 ></i>
               </div>
