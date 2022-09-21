@@ -3,12 +3,13 @@ import './Card.css'
 
 class Card extends Component {
 
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     cardExpand: false
-  //   }
-  // }
+  constructor(props) {
+    super(props)
+    this.state = {
+      cardExpand: false,
+      like: false
+    }
+  }
 
 
   // expandCard = () => {
@@ -20,6 +21,18 @@ class Card extends Component {
   // }
 
 
+  likeHotel = () => {
+    if (this.state.like === false) {
+      this.setState({ like: true })
+    } else {
+      this.setState({ like: false })
+    }
+  }
+
+
+
+
+
   render() {
     return(
       <>
@@ -27,6 +40,7 @@ class Card extends Component {
         // onClick={this.expandCard}
         style={{
           width: "20rem",
+          color: `${ this.props.theme==='light' ? "#000" : "#fff"}`,
           backgroundColor: `${ this.props.theme==='light' ? "#fff" : "#000"}`
         }}
         >
@@ -39,6 +53,13 @@ class Card extends Component {
               <div className='rating' style={{marginBottom:"2px"}}>
                 <i className='fa-solid fa-star'></i>
                 <span> {this.props.rating} </span>
+              </div>
+              <div className="like" onClick={this.likeHotel}>
+                <i className='fa-solid fa-heart'
+                  style={{
+                    color: `${ this.state.like ? "rgb(220, 11, 11)" : "rgba(18, 18, 18, 0.715)" }`
+                  }}
+                ></i>
               </div>
         </div>
       </div>

@@ -10,11 +10,14 @@ class Loading extends Component {
         }
     }
 
-
     changeLoadingState = () => {
         if (this.state.isLoading === true) {
             this.setState({ isLoading: false })
         }
+    }
+
+    loadingBar = () => {
+        // document.querySelector('.loader').style
     }
 
 
@@ -63,7 +66,9 @@ class Loading extends Component {
             document.querySelector('#continue').style.opacity = "0"
             document.querySelector('#continue').style.visibility = "hidden"
         }, 7000);
-        
+    
+
+
 
 
     return (
@@ -103,6 +108,11 @@ class Loading extends Component {
             <div id="continue">
                 <p>(Click anywhere to continue)</p>
             </div>
+
+
+            <div className="loader"
+                onClick={this.loadingBar}
+            ></div>
         </div>
     )
   }

@@ -57,7 +57,7 @@
     font-weight: 500;
     color: #000;
 }
-.ham-menu p:nth-child(1):hover {
+.ham-menu p:nth-child(1):hover, .ham-menu p:nth-child(2):hover {
     background-color: rgb(223, 223, 223);
 }
 
