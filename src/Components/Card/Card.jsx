@@ -3,15 +3,33 @@ import './Card.css'
 
 class Card extends Component {
 
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {
+  //     cardExpand: false
+  //   }
+  // }
+
+
+  // expandCard = () => {
+  //   if (this.state.cardExpand === false) {
+  //     this.setState({ cardExpand: true })
+  //   }  else {
+  //     this.setState({ cardExpand: false })
+  //   }
+  // }
+
+
   render() {
     return(
+      <>
       <div className="card"
+        // onClick={this.expandCard}
         style={{
           width: "20rem",
-          color: `${ this.props.theme==='light' ? "#000" : "#fff"}`,
           backgroundColor: `${ this.props.theme==='light' ? "#fff" : "#000"}`
         }}
-      >
+        >
         <img className="card-img-top" src={this.props.imageURL} alt="hotel-img" />
         <div className="card-body">
               <h6 className="card-title"> {this.props.name} </h6>
@@ -24,6 +42,7 @@ class Card extends Component {
               </div>
         </div>
       </div>
+      </>
     )
   }
 }

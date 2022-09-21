@@ -32,10 +32,8 @@ class Navbar extends Component {
         <div className='my-navbar'>
           <ul>
             <li className='nav-items'> <i className="fa-solid fa-house"></i> <span>Home</span> </li>
-            <li className='nav-items'> <i className="fa-solid fa-user-plus"></i> <span>Sign Up</span> </li>
-            <li className='nav-items'> <i className="fa-solid fa-right-to-bracket"></i> <span>Log In</span> </li>
-            <li className='nav-items'> <i className="fa-solid fa-circle-info"></i> About </li>
             <li className='nav-items'> <i className="fa-solid fa-star"></i> Reviews </li>
+            <li className='nav-items'> <i className="fa-solid fa-circle-info"></i> About </li>
             <li className='nav-items'> <i className="fa-solid fa-message"></i> Contact </li>
             <li className='nav-items'> <i className="fa-solid fa-handshake-angle"></i> <span>Help</span> </li>
           </ul>

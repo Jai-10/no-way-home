@@ -2,7 +2,7 @@
     width: 100%;
     padding: 2%;
     transition: all ease-in-out .1s;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .search{
@@ -27,6 +27,40 @@
 .sign-in:hover {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+
+
+
+
+/* user ham menu */
+.ham-menu {
+    z-index: 10;
+    width: 200px;
+    font-size: 14px;
+    position: absolute;
+    top: 90px;
+    right: 180px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    transition: all ease-in-out .1s;
+}
+.ham-menu p {
+    padding: 5px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all ease-in-out .1s;
+    color: rgb(88, 88, 88);
+}
+.ham-menu p:nth-child(1) {
+    font-weight: 500;
+    color: #000;
+}
+.ham-menu p:nth-child(1):hover {
+    background-color: rgb(223, 223, 223);
+}
+
 
 
 /* Extra small devices (phones, 600px and down) */

@@ -2,6 +2,26 @@ import React, { Component } from 'react'
 import './Header_1.css'
 
 class Header_1 extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      isUserHamOpen: false
+    }
+  }
+
+
+  // open user hamburger menu
+  openUserHam = () => {
+    if (this.state.isUserHamOpen === false) {
+      this.setState({ isUserHamOpen: true })
+    }
+    else if (this.state.isUserHamOpen === true) {
+      this.setState({ isUserHamOpen: false })
+    }
+  }
+
+
   render() {
     return (
       <div className='header1 d-flex justify-content-around'>
@@ -26,9 +46,23 @@ class Header_1 extends Component {
                 <i className="fa fa-search border rounded-circle bg-info p-2" style={{fontSize: "12px"}}></i></div>
             </div>
          </div>
-         <div className="sign-in">
+         <div className="sign-in"
+          onClick={this.openUserHam}
+         >
            <i className="fa-solid fa-bars p-1"></i>
            <i className="fa-solid fa-circle-user p-1" style={{fontSize:'22px'}}></i>
+         </div>
+         <div className="ham-menu"
+          style={{
+            display: `${this.state.isUserHamOpen===false ? "none" : "block" }`
+          }}
+         >
+          <p>Sign Up</p>
+          <p>Sign In</p>
+          <hr />
+          <p>Host your home</p>
+          <p>Host an experience</p>
+          <p>Help</p>
          </div>
       </div>
     )

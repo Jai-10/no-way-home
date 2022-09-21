@@ -39,10 +39,10 @@ class Search extends Component {
   render(){
 
     const bottomBorder = {borderBottom:'2px solid black', paddingBottom:'1%'}
-    // const checkBg = { backgroundColor: 'white',borderRadius: '45px',width: '64%',height: '5.25em',margin: '-15px', marginLeft: '-62px',  textAlign: 'center',paddingTop: '4.5%',cursor:'pointer'}
-    // const whoBg = {backgroundColor: 'white',borderRadius: '45px',height: '5.4em',width: '63%',margin: '-16px',marginRight: '-72px',
-    // textAlign: 'center',paddingTop: '1.5%',paddingLeft: '1.5%'}
-    // const whereBg = {backgroundColor: 'white',borderRadius: '45px',width: '26%',height: '5.3em',margin: '-16px',marginLeft: '-56px',textAlign: 'center',paddingTop: '1.5%'}
+    const checkBg = { backgroundColor: 'white',borderRadius: '45px',width: '64%',height: '5.25em',margin: '-15px', marginLeft: '-62px',  textAlign: 'center',paddingTop: '4.5%',cursor:'pointer'}
+    const whoBg = {backgroundColor: 'white',borderRadius: '45px',height: '5.4em',width: '63%',margin: '-16px',marginRight: '-72px',
+    textAlign: 'center',paddingTop: '1.5%',paddingLeft: '1.5%'}
+    const whereBg = {backgroundColor: 'white',borderRadius: '45px',width: '26%',height: '5.3em',margin: '-16px',marginLeft: '-56px',textAlign: 'center',paddingTop: '1.5%'}
 
     const isWhere = this.state.showWhere;
     const isChecked = this.state.showCalender;
@@ -66,6 +66,7 @@ class Search extends Component {
       document.querySelector('.bgWhite').style = 'background:transparent';
       document.querySelector('.right').style='border:none';
     }
+
     
     return (
      <div className='searchSection mt-0'>
@@ -118,9 +119,6 @@ class Search extends Component {
         </div>
 
         {data}
-        {/* <SearchRegion/> */}
-        {/* <CalendarSearch/> */}
-        {/* <Who/> */}
      </div>
     )
   }
