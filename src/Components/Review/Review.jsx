@@ -16,6 +16,7 @@ class Review extends Component {
                             <p> {this.props.review} </p>
                             <div className='star-container'>
                                 <i className='fa-solid fa-star'></i>
+                                <span className='review-rating'>{this.props.rating}</span>
                             </div>
                             <footer className="blockquote-footer"><cite title="Source Title">{this.props.src}</cite></footer>
                         </blockquote>
