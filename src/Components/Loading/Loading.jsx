@@ -21,7 +21,7 @@ class Loading extends Component {
 
     render() {
 
-        // loading quotes animation
+        // loading bar animation
         setTimeout(() => {
             let i = 0;
             if (i == 0) {
@@ -40,6 +40,7 @@ class Loading extends Component {
                 }
             }
         }, 2000)
+        // loading quotes animation
         setTimeout(() => {
             const items = document.querySelectorAll(".loading-quotes");
             for (let i=0; i<items.length; i++) {

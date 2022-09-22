@@ -91,12 +91,14 @@ class Home extends Component {
 
           <Header_2 theme={this.props.theme} />
 
-          <div className="reviews-container">
-            <ReviewContainer theme={this.props.theme} />
-          </div>
 
           <div className="main-content-container">
             <MainContent theme={this.props.theme} />
+          </div>
+
+
+          <div className="reviews-container">
+            <ReviewContainer theme={this.props.theme} />
           </div>
           
           

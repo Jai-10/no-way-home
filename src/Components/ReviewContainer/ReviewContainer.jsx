@@ -7,6 +7,7 @@ class ReviewContainer extends Component {
     render() {
         return (
             <div className='review-container'>
+                <h3>Reviews</h3>
                 {
                     review_api.map(review => {
                         return <Review
