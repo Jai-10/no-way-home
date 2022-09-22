@@ -1,4 +1,4 @@
-const api = [
+const hotel_api = [
     {
         "id": 1,
         "image": require("./assets/hotel-images/1.jpg"),
@@ -6,7 +6,7 @@ const api = [
         "location": "Mumbai",
         "rating": 4.32,
         "distance": 235,
-        "price": 7274
+        "price": 7274,
     },
     {
         "id": 2,
@@ -361,4 +361,4 @@ const api = [
     }
 ]
 
-export default api
+export default hotel_api

@@ -93,7 +93,7 @@ class Loading extends Component {
         <div className='loading'
             onClick={this.changeLoadingState}
             style={{
-                top: `${ this.state.isLoading===true ? '0' : "-100%" }`
+                top: `${ this.state.isLoading===true ? '0' : "-100%" }`,
             }}
         >
             <div className='loading-text'>

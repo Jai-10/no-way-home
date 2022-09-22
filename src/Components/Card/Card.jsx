@@ -41,15 +41,31 @@ class Card extends Component {
         style={{
           width: "20rem",
           color: `${ this.props.theme==='light' ? "#000" : "#fff"}`,
-          backgroundColor: `${ this.props.theme==='light' ? "#fff" : "#000"}`
+          backgroundColor: `${ this.props.theme==='light' ? "#fff" : "#243138"}`
         }}
         >
         <img className="card-img-top" src={this.props.imageURL} alt="hotel-img" />
         <div className="card-body">
               <h6 className="card-title"> {this.props.name} </h6>
-              <p className='card-text location'> {this.props.location} </p>
-              <span className="card-text distance"> {this.props.distance} kilometers </span> <br />
-              <span className="card-text"> ₹{this.props.price} <span className='price'> night </span> </span>
+              <p className='card-text location'
+                style={{
+                  color: `${ this.props.theme==='light' ? "#000" : "#fff"}`
+                }}
+              > {this.props.location} </p>
+              <span className="card-text distance"
+                style={{
+                  color: `${ this.props.theme==='light' ? "#000" : "#fff"}`
+                }}
+              > {this.props.distance} kilometers </span> <br />
+              <span className="card-text"
+                style={{
+                  color: `${ this.props.theme==='light' ? "#000" : "#fff"}`
+                }}
+              > ₹{this.props.price} <span className='price'
+                style={{
+                  color: `${ this.props.theme==='light' ? "#000" : "#fff"}`
+                }}
+              > night </span> </span>
               <div className='rating' style={{marginBottom:"2px"}}>
                 <i className='fa-solid fa-star'></i>
                 <span> {this.props.rating} </span>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Card from '../Card/Card';
 import './MainContent.css'
-import api from '../../api'
+import hotel_api from '../../hotel_api'
 
 class MainContent extends Component {
 
@@ -10,7 +10,7 @@ class MainContent extends Component {
       <div className='main-content'>
         
         {
-          api.map(card => {
+          hotel_api.map(card => {
             return <Card
               key = {card.id}
               imageURL = {card.image}

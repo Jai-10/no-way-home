@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Header_1.css'
+import { Route, Link, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 class Header_1 extends Component {
 
@@ -24,6 +25,7 @@ class Header_1 extends Component {
 
   render() {
     return (
+      <Router>
       <div className='header1 d-flex justify-content-around'>
          <div className="logo">
            <img src={require("../../assets/logo.png")} alt='logoimage'
@@ -46,9 +48,9 @@ class Header_1 extends Component {
                 <i className="fa fa-search border rounded-circle bg-info p-2" style={{fontSize: "12px"}}></i></div>
             </div>
          </div>
-         <div className="sign-in"
-          onClick={this.openUserHam}
-         >
+
+
+         <div className="sign-in" onClick={this.openUserHam}>
            <i className="fa-solid fa-bars p-1"></i>
            <i className="fa-solid fa-circle-user p-1" style={{fontSize:'22px'}}></i>
          </div>
@@ -61,10 +63,13 @@ class Header_1 extends Component {
           <p>Sign In</p>
           <hr />
           <p>Host your home</p>
-          <p>Host an experience</p>
+          {/* <Link to="/host"> */}
+            <p>Host an experience</p>
+          {/* </Link> */}
           <p>Help</p>
          </div>
       </div>
+      </Router>
     )
   }
 }

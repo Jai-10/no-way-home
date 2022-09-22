@@ -1,0 +1,16 @@
+.review-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 87vw;
+    margin: 20px;
+    padding: 20px;
+    transition: all ease-in-out .1s;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.review-container::-webkit-scrollbar { 
+    display: none;
+}

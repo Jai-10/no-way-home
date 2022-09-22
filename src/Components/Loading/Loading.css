@@ -16,8 +16,8 @@
     z-index: 101;
     height: 100%;
     width: 100%;
-    color: #000;
-    background-color: #fff;
+    color: rgb(41, 41, 106);
+    background-color: rgb(207, 208, 242);
     transition: all ease-in-out .5s;
     cursor: default;
 }
@@ -41,9 +41,9 @@
 }
 
 @keyframes text-animation {
-    0% { color: #000; }
+    0% { color: rgb(41, 41, 106); }
     50% { color: rgb(149, 149, 149); }
-    100% { color: #000; }
+    100% { color: rgb(41, 41, 106); }
 }
 .loading-h1 h1 {
     font-size: 3.5rem;
@@ -64,7 +64,7 @@
 
 @keyframes dot1-animation {
     0% { background-color: rgb(149, 149, 149); transform: translateY(-3px); }
-    50% { background-color: #000; transform: translateY(0); }
+    50% { background-color: rgb(41, 41, 106); transform: translateY(0); }
     100% { background-color: rgb(149, 149, 149); transform: translateY(-3px); }
 }
 .loading-dots div {
@@ -140,5 +140,5 @@
 .loader {
     width: 0%;
     height: 30px;
-    background-color: #000;
+    background-color: rgb(41, 41, 106);
 }

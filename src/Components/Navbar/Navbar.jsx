@@ -29,7 +29,9 @@ class Navbar extends Component {
   render() {
     return (
       <div className="parent">
-        <div className='my-navbar'>
+        <div className='my-navbar'
+          style={{backgroundColor: `${ this.props.theme==='light' ? "#202a2f" : "#28414d"}`}}
+        >
           <ul>
             <li className='nav-items'> <i className="fa-solid fa-house"></i> <span>Home</span> </li>
             <li className='nav-items'> <i className="fa-solid fa-star"></i> Reviews </li>
@@ -40,8 +42,12 @@ class Navbar extends Component {
         </div>
 
         <div className="menu" onClick={this.toggleNavbar}>
-          <div className="menu-bar-1"></div>
-          <div className="menu-bar-2"></div>
+          <div className="menu-bar-1"
+            style={{backgroundColor: `${ this.props.theme==='light' ? "#202a2f" : "#acccdd"}`}}
+          ></div>
+          <div className="menu-bar-2"
+            style={{backgroundColor: `${ this.props.theme==='light' ? "#202a2f" : "#acccdd"}`}}
+          ></div>
         </div>
       </div>
     )

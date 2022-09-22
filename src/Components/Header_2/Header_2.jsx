@@ -9,11 +9,11 @@ const Header_2 = (props) => {
   }
   const darkTheme = {
     color: "white",
-    backgroundColor: "black"
+    backgroundColor: "#243138"
   }
 
   return (
-      <>
+      <div id='header-two-parent'>
       <div className='header-two-container'
         style={ props.theme==='light' ? lightTheme : darkTheme }
       >
@@ -199,7 +199,7 @@ const Header_2 = (props) => {
           </div>
         </div>
       </div>
-      </>
+      </div>
     )
   // }
 }
