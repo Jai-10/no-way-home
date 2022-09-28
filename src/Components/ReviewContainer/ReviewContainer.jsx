@@ -6,7 +6,9 @@ import review_api from '../../review_api'
 class ReviewContainer extends Component {
     render() {
         return (
-            <div className='review-container'>
+            <div className='review-container'
+                style={{ color: `${ this.props.theme==='light' ? "black" : "white"}` }}
+            >
                 <h3>Reviews</h3>
                 {
                     review_api.map(review => {
