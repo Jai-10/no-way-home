@@ -7,6 +7,7 @@ class MainContent extends Component {
 
   render() {
     return (
+      <>
       <div className='main-content'>
         
         {
@@ -23,9 +24,9 @@ class MainContent extends Component {
             />
           })
         }
-
-        
       </div>
+
+      </>
     )
   }
 }
