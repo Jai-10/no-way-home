@@ -13,6 +13,7 @@ class ReviewContainer extends Component {
                 {
                     review_api.map(review => {
                         return <Review
+                            key={review.id}
                             review={review.review}
                             rating={review.rating}
                             src={review.source}

@@ -89,8 +89,6 @@ class Home extends Component {
             {data}
           </div>
 
-          <Header_2 theme={this.props.theme} />
-
 
           <div className="main-content-container">
             <MainContent theme={this.props.theme} />
