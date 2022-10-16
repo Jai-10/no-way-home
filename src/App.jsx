@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Home from './Components/Home/Home'
 import Host from './Components/Host/Host'
+import Login from './Components/Login/Login';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'  
 
 
@@ -31,16 +32,18 @@ class App extends Component {
   render() {
   return (
 
-    // <Router >
+    <Router>
+
       <div className="App">
 
-        {/* <Routes>
-          <Route path='/' element={<Home theme={this.state.theme} to='/' />} />
-          <Route path='/host' element={<Host theme={this.state.theme} />} />
-          <Route path='*' element={ <h1 style={{textAlign: "center"}}> Error! Page not found </h1> } />
-        </Routes> */}
-
-        <Home theme={this.state.theme} />
+        <Routes>
+          <Route path='/' element={<Home theme={this.state.theme} />}>
+          </Route>
+          <Route path='/login' element={<Login />}>
+          </Route>
+          <Route path='/host' element={<Host />}>
+          </Route>
+        </Routes>
 
         <div className="theme" onClick={this.changeTheme}
           style={{
@@ -52,7 +55,8 @@ class App extends Component {
         </div>
         
       </div>
-    // </Router>
+      
+    </Router>
   );
   }
 }

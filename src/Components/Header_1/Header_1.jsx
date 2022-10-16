@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Header_1.css'
 import { Route, Link, BrowserRouter as Router, Routes } from 'react-router-dom'
+import Login from '../Login/Login'
 
 class Header_1 extends Component {
 
@@ -25,7 +26,6 @@ class Header_1 extends Component {
 
   render() {
     return (
-      <Router>
       <div className='header1 d-flex justify-content-around'>
          <div className="logo">
            <img src={require("../../assets/logo.png")} alt='logoimage'
@@ -60,16 +60,18 @@ class Header_1 extends Component {
           }}
          >
           <p>Sign Up</p>
-          <p>Sign In</p>
+          <Link to='/login' style={{ textDecoration: 'none' }}>
+             <p>Sign In</p>
+          </Link>
           <hr />
           <p>Host your home</p>
-          {/* <Link to="/host"> */}
-            <p>Host an experience</p>
-          {/* </Link> */}
+          <Link to='/host' style={{ textDecoration: 'none' }}>
+              <p>Host an experience</p>
+          </Link>
           <p>Help</p>
          </div>
       </div>
-      </Router>
+
     )
   }
 }

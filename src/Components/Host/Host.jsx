@@ -1,7 +1,7 @@
 import React from 'react'
 import './Host.css'
 import backgroundVideo from '../../assets/video/vdo.mp4'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'  
+import { Link } from 'react-router-dom'  
 
 
 const Host = () => {
@@ -9,13 +9,15 @@ const Host = () => {
             <div className='host'>
                 <div className="host-nav d-flex justify-content-between m-2">
                     <div className="host-left">
-                    <img src={require("../../assets/logo.png")} alt="hostlogo"  
-                    style={{
-                        width: '60px',
-                        position: "absolute",
-                        marginTop: "0%",
-                        transition: "all ease-in-out .1s"
-                        }}/>
+                    <Link to='/' style={{ textDecoration: 'none' }}>
+                        <img src={require("../../assets/logo.png")} alt="hostlogo"  
+                        style={{
+                            width: '60px',
+                            position: "absolute",
+                            marginTop: "0%",
+                            transition: "all ease-in-out .1s"
+                            }}/>
+                    </Link>
                     </div>
                     <div className="host-right d-flex justify-content-around">
                     <div className="host-right-ele m-3">

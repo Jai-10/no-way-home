@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import './Home.css';
 import Navbar from '../Navbar/Navbar'
 import Header_1 from '../Header_1/Header_1'
-import Header_2 from '../Header_2/Header_2'
 import ShowMap from '../ShowMap/ShowMap';
 import Footer_1 from '../Footer_1/Footer_1';
 import Search from '../Search/Search';
 import MainContent from '../MainContent/MainContent';
 import Loading from '../Loading/Loading';
 import ReviewContainer from '../ReviewContainer/ReviewContainer';
-import { Route, BrowserRouter as Router, Routes, Link } from 'react-router-dom'  
 
 class Home extends Component {
 
@@ -66,11 +64,6 @@ class Home extends Component {
 
   return (
 
-    // <Router>
-      // <Routes>
-        // <Route path='/home'>
-
-
         <div className="website"
           style={{
             backgroundColor: `${this.props.theme==='light' ? "#d5e6f0" : "#17242B"}`
@@ -117,11 +110,6 @@ class Home extends Component {
           </div>
           
         </div>
-
-        // </Route>
-    // </Routes>
-  // </Router>
-
   );
   }
 }
